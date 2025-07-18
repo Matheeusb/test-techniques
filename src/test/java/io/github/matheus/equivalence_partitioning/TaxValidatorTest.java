@@ -26,24 +26,24 @@ class TaxValidatorTest {
     @Test
     @DisplayName("Should return 0 when amount is less than or equal to 500")
     void testTaxLessThan500() {
-        assertEquals(TaxValidator.calculateTax(300), 0);
+        assertEquals(0, TaxValidator.calculateTax(300));
     }
 
     @Test
     @DisplayName("Should return 5 when amount is between 500 and 1000")
     void testTaxBetween500And1000() {
-        assertEquals(TaxValidator.calculateTax(750), 5);
+        assertEquals(5, TaxValidator.calculateTax(750));
     }
 
     @Test
     @DisplayName("Should return 7 when amount is between 1000 and 2000")
     void testTaxBetween1000And2000() {
-        assertEquals(TaxValidator.calculateTax(1500), 7);
+        assertEquals(7, TaxValidator.calculateTax(1500));
     }
 
     @Test
     @DisplayName("Should return 10 when amount is greater than 2000")
     void testTaxGreaterThan2000() {
-        assertEquals(TaxValidator.calculateTax(2500), 10);
+        assertEquals(10, TaxValidator.calculateTax(2500));
     }
 }

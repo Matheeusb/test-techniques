@@ -44,7 +44,7 @@ class VendingMachineTest {
     @DisplayName("Should return DISPENSING state when product is selected and there is stock available")
     void testDispenseProduct() {
         VendingMachine machine = new VendingMachine("Loading");
-        
+
         machine.insertCoin();
         machine.selectProduct();
         assertEquals(VendingMachine.State.DISPENSING, machine.getCurrentState());

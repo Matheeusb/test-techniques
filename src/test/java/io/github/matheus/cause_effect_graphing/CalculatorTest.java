@@ -32,24 +32,24 @@ class CalculatorTest {
     @Test
     @DisplayName("Should return 15 when isPremium is true and coupon is true")
     void testDiscount15() {
-        assertEquals(Calculator.calculateDiscount(true, true), 15);
+        assertEquals(15, Calculator.calculateDiscount(true, true));
     }
 
     @Test
     @DisplayName("Should return 10 when isPremium is true and coupon is false")
     void testDiscount10() {
-        assertEquals(Calculator.calculateDiscount(true, false), 10);
+        assertEquals(10, Calculator.calculateDiscount(true, false));
     }
 
     @Test
     @DisplayName("Should return 5 when isPremium is false and coupon is true")
     void testDiscount5() {
-        assertEquals(Calculator.calculateDiscount(false, true), 5);
+        assertEquals(5, Calculator.calculateDiscount(false, true));
     }
 
     @Test
     @DisplayName("Should return 0 when isPremium is false and coupon is false")
     void testDiscount0() {
-        assertEquals(Calculator.calculateDiscount(false, false), 0);
+        assertEquals(0, Calculator.calculateDiscount(false, false));
     }
 }
